@@ -1,0 +1,22 @@
+name: Feature request
+description: Propose a new capability or an API change / 提出新能力或 API 变更
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case / 使用场景
+      description: What are you trying to build, and in which extension page / iframe setup? / 你想实现什么？在怎样的扩展页 / iframe 结构里？
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Why the current API falls short / 现有 API 为何不够
+      description: What did you try, and where did it stop working or get awkward? / 你试过什么，卡在哪里？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API (optional) / 建议的 API（可选）

@@ -1,0 +1,61 @@
+name: Bug report
+description: Something does not behave as documented / 行为与文档不符
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository only collects issues; the source code is not hosted here. Please fill in every required field so the problem can be reproduced from the published package alone.
+        本仓库只收集问题，不托管源码。请完整填写必填项，以便仅凭发布的包就能复现问题。
+  - type: input
+    id: version
+    attributes:
+      label: Package version / 包版本
+      description: Output of `npm ls crx-iframe-rpc` or `pnpm ls crx-iframe-rpc`
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version / Chrome 版本
+      placeholder: "142"
+    validations:
+      required: true
+  - type: dropdown
+    id: manifest
+    attributes:
+      label: Manifest version
+      options:
+        - MV3
+        - MV2
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Where it runs / 运行环境
+      description: Where the host page lives (options page, popup, side panel, other chrome-extension:// page) and where the iframe content is loaded from (same extension, web origin, sandboxed frame, …) / 宿主页所在位置，以及 iframe 内容的来源
+    validations:
+      required: true
+  - type: textarea
+    id: entry
+    attributes:
+      label: Entry points and options / 使用的入口与选项
+      description: exposeChrome / connectChrome, or serveRpc / connectRpc / serveRpcWithPoster, plus any non-default options / 以及改动过的非默认选项
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: A minimal snippet or repository is ideal / 最好附最小可复现代码或仓库
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected vs. actual behavior / 期望与实际行为
+      description: Include the complete error or warning text / 请附完整的报错或警告文本
+    validations:
+      required: true

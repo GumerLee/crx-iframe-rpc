@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation / 使用文档
+    url: https://www.npmjs.com/package/crx-iframe-rpc
+    about: The usage guide, API reference and changelog ship with the npm package. / 使用指南、API 说明与更新日志随 npm 包发布。

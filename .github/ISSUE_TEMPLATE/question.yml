@@ -1,0 +1,22 @@
+name: Question
+description: Ask how to use the package / 使用上的疑问
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the docs on the npm package page first — most usage questions are answered there: https://www.npmjs.com/package/crx-iframe-rpc
+        请先阅读 npm 包页面上的文档，多数使用问题都能在那里找到答案。
+  - type: input
+    id: version
+    attributes:
+      label: Package version / 包版本
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / 问题
+      description: What are you trying to do, and what have you tried? / 你想做什么，已经试过什么？
+    validations:
+      required: true
